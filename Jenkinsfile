@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-              git 'https://github.com/ashokitschool/maven-web-app.git'
+              git 'https://github.com/SheetalKadolkar/maven-web-app-master.git'
             }
         }
         stage('build'){
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('docker image'){
             steps {
-                sh 'docker build -t ashokit/mavenwebapp .'
+                sh 'docker build -t sheetalkadolkar/mavenwebapp .'
             }
         }
         stage('k8s deploy'){
